@@ -393,6 +393,11 @@ textarea {
   margin-bottom: 0;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 .figure {
   display: inline-block;
 }
@@ -429,6 +434,23 @@ textarea {
    .container {
     max-width: 1320px;
   }
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
 }
 
 .col {
@@ -651,6 +673,17 @@ textarea {
   cursor: default;
 }
 
+.nav-pills .nav-link {
+  background: none;
+  border: 0;
+  border-radius: 0.25rem;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #0d6efd;
+}
+
 .navbar {
   position: relative;
   display: flex;
@@ -796,6 +829,19 @@ textarea {
 }
 .modal.modal-static .modal-dialog {
   transform: scale(1.02);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
 }
 
 .modal-backdrop {
@@ -1240,6 +1286,15 @@ textarea {
 
 .w-100 {
   width: 100% !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
 
 .py-3 {
