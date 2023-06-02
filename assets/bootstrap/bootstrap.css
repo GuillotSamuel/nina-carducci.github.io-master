@@ -5967,7 +5967,7 @@ textarea.form-control-lg {
 .carousel {
   position: relative;
   width:100%;
-  padding-bottom:calc(100%/(886/1917));
+  height:calc(100%*(886/1917));
 }
 
 .carousel.pointer-event {
